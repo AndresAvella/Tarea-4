@@ -63,3 +63,43 @@ double rkvelocidady(double vx, double vy){
     
 }
 
+double rkvelocidadx(double vx, double vy){
+    
+    c11=h* acelerax( vx ,  vy );
+    
+    
+    c22=h*acelerax(vx+0.5*c11,vy);
+    
+    
+    c33=h*acelerax(vx+0.5*c22,vy);
+    
+    
+    c44=h*acelerax(vx+c33,vy);
+    
+    
+    vfx= vx+1.0/6.0 *(c11+c22*2+c33*2+c44);
+    return vfx;
+    
+}
+
+double rkposiy(double vx , double vy , double yo ){
+    
+    c1=h* aceleray( vx ,  vy );
+    d1=h*vy;
+    
+    c2=h*aceleray(vx,vy+0.5*c1);
+    d2=h*(vy+0.5*c2);
+    
+    c3=h*aceleray(vx,vy+0.5*c2);
+    d3= h*(vy+0.5*c3);
+    
+    c4=h*aceleray(vx,vy+c3);
+    d4=h*(vy+0.5*c4);
+    
+    yf= yo+1.0/6.0 *(d1+d2*2+d3*2+d4);
+    
+    return yf;
+   
+    
+}
+

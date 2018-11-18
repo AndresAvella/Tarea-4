@@ -149,5 +149,192 @@ int main(){
         yt=rkposiy(t1, t2,t4) ;
         file <<  vtx<<" "<<vty << " "<< xt<<" "<< yt <<endl;
     }
+     file.close();
     
+    double v01 = 300.0;
+    double angle1 = M_PI/18.0;
+    
+    double vtx1=rkvelocidadx(v01*cos(angle1), v01*sin(angle1));
+    double vty1=rkvelocidady(v01*cos(angle1), v01*sin(angle1));
+    double xt1=rkposix(v01*cos(angle1), v01*sin(angle1),0);
+    double yt1= rkposix(v01*cos(angle1), v01*sin(angle1),0);
+    
+    ofstream file1;
+    file1.open("datos2.dat");
+    
+    for ( int i = 0 ; i < 2000; i++){
+        double t11=vtx1;
+        double t22=vty1;
+        double t33=xt1;
+        double t44=yt1;
+        vtx1=rkvelocidadx(t11, t22);
+        vty1=rkvelocidady(t11, t22) ;
+        xt1=rkposix(t11, t22,t33) ;
+        yt1=rkposiy(t11, t22,t44) ;
+        file1 <<  vtx1<<" "<<vty1<< " "<< xt1<<" "<< yt1             <<endl;
+    }
+    file1.close();
+    
+    
+    
+    
+    double v02 = 300.0;
+    double angle2 = M_PI/9.0;
+    
+    double vtx2=rkvelocidadx(v02*cos(angle2), v02*sin(angle2));
+    double vty2=rkvelocidady(v02*cos(angle2), v02*sin(angle2));
+    double xt2=rkposix(v02*cos(angle2), v02*sin(angle2),0);
+    double yt2= rkposix(v02*cos(angle2), v02*sin(angle2),0);
+    
+    ofstream file2;
+    file2.open("datos3.dat");
+    
+    for ( int i = 0 ; i < 2000 ; i++){
+        double tt1=vtx2;
+        double tt2=vty2;
+        double tt3=xt2;
+        double tt4=yt2;
+        vtx2=rkvelocidadx(tt1, tt2);
+        vty2=rkvelocidady(tt1, tt2) ;
+        xt2=rkposix(tt1, tt2,tt3) ;
+        yt2=rkposiy(tt1, tt2,tt4) ;
+        file2 <<  vtx2<<" "<<vty2<< " "<< xt2<<" "<< yt2 <<endl;
+    }
+    file2.close();
+    
+    
+    double v3 = 300.0;
+    double angle3 = 30.0*M_PI/180.0;
+    
+    double vtx3=rkvelocidadx(v3*cos(angle3), v3*sin(angle3));
+    double vty3=rkvelocidady(v3*cos(angle3), v3*sin(angle3));
+    double xt3=rkposix(v3*cos(angle3), v3*sin(angle3),0);
+    double yt3= rkposix(v3*cos(angle3), v3*sin(angle3),0);
+    
+    ofstream file3;
+    file3.open("datos4.dat");
+    
+    for ( int i = 0 ; i < 2000 ; i++){
+        double t31=vtx3;
+        double t32=vty3;
+        double t333=xt3;
+        double t34=yt3;
+        vtx3=rkvelocidadx(t31, t32);
+        vty3=rkvelocidady(t31, t32) ;
+        xt3=rkposix(t31, t32,t333) ;
+        yt3=rkposiy(t31, t32,t34) ;
+        file3 <<  vtx3<<" "<<vty3<< " "<< xt3<<" "<< yt3 <<endl;
+    }
+    file3.close();
+    
+    double v4 = 300.0;
+    double angle4 = 40.0*M_PI/180.0;
+    
+    double vtx4=rkvelocidadx(v4*cos(angle4), v4*sin(angle4));
+    double vty4=rkvelocidady(v4*cos(angle4), v4*sin(angle4));
+    double xt4=rkposix(v4*cos(angle4), v4*sin(angle4),0);
+    double yt4= rkposix(v4*cos(angle4), v4*sin(angle4),0);
+    
+    ofstream file4;
+    file4.open("datos5.dat");
+    
+    for ( int i = 0 ; i < 2000 ; i++){
+        double t41=vtx4;
+        double t42=vty4;
+        double t43=xt4;
+        double t444=yt4;
+        vtx4=rkvelocidadx(t41, t42);
+        vty4=rkvelocidady(t41, t42) ;
+        xt4=rkposix(t41, t42,t43) ;
+        yt4=rkposiy(t41, t42,t444) ;
+        file4 <<  vtx4<<" "<<vty4<< " "<< xt4<<" "<< yt4 <<endl;
+    }
+    file4.close();
+    
+    
+    
+    
+    double v5 = 300.0;
+    double angle5 = 50.0*M_PI/180.0;
+    
+    double vtx5=rkvelocidadx(v5*cos(angle5), v5*sin(angle5));
+    double vty5=rkvelocidady(v5*cos(angle5), v5*sin(angle5));
+    double xt5=rkposix(v5*cos(angle5), v5*sin(angle5),0);
+    double yt5= rkposix(v5*cos(angle5), v5*sin(angle5),0);
+    
+    ofstream file5;
+    file5.open("datos6.dat");
+    
+    for ( int i = 0 ; i < 2000 ; i++){
+        double t51=vtx5;
+        double t52=vty5;
+        double t53=xt5;
+        double t54=yt5;
+        vtx5=rkvelocidadx(t51, t52);
+        vty5=rkvelocidady(t51, t52) ;
+        xt5=rkposix(t51, t52,t53) ;
+        yt5=rkposiy(t51, t52,t54) ;
+        file5 <<  vtx5<<" "<<vty5<< " "<< xt5<<" "<< yt5 <<endl;
+    }
+    file5.close();
+    
+    
+    
+    
+    double v6 = 300.0;
+    double angle6 = 60.0*M_PI/180.0;
+    
+    double vtx6=rkvelocidadx(v6*cos(angle6), v6*sin(angle6));
+    double vty6=rkvelocidady(v6*cos(angle6), v6*sin(angle6));
+    double xt6=rkposix(v6*cos(angle6), v6*sin(angle6),0);
+    double yt6= rkposix(v6*cos(angle6), v6*sin(angle6),0);
+    
+    ofstream file6;
+    file6.open("datos7.dat");
+    
+    for ( int i = 0 ; i < 2000 ; i++){
+        double t61=vtx6;
+        double t62=vty6;
+        double t63=xt6;
+        double t64=yt6;
+        vtx6=rkvelocidadx(t61, t62);
+        vty6=rkvelocidady(t61, t62) ;
+        xt6=rkposix(t61, t62,t63) ;
+        yt6=rkposiy(t61, t62,t64) ;
+        file6 <<  vtx6<<" "<<vty6<< " "<< xt6<<" "<< yt6 <<endl;
+    }
+    file6.close();
+    
+    
+    
+    double v7 = 300.0;
+    double angle7 = 70.0*M_PI/180.0;
+    
+    double vtx7=rkvelocidadx(v7*cos(angle7), v7*sin(angle7));
+    double vty7=rkvelocidady(v7*cos(angle7), v7*sin(angle7));
+    double xt7=rkposix(v6*cos(angle7), v7*sin(angle7),0);
+    double yt7= rkposix(v6*cos(angle7), v7*sin(angle7),0);
+    
+    ofstream file7;
+    file7.open("datos8.dat");
+    
+    for ( int i = 0 ; i < 2000 ; i++){
+        double t71=vtx7;
+        double t72=vty7;
+        double t73=xt7;
+        double t74=yt7;
+        vtx7=rkvelocidadx(t71, t72);
+        vty7=rkvelocidady(t71, t72) ;
+        xt7=rkposix(t71, t72,t73) ;
+        yt7=rkposiy(t71, t72,t74) ;
+        file7 <<  vtx7<<" "<<vty7<< " "<< xt7<<" "<< yt7 <<endl;
+    }
+    file7.close();
+    
+    
+    
+    
+	return 0;
+}
+
     

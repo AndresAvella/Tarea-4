@@ -35,3 +35,8 @@ double acelerax(double vx, double vy){
     ax=((vx*vx)+(vy*vy))*(-c/m);
     return ax;
 }
+double aceleray(double vx, double vy ){
+    
+    ay= -g - ((vx*vx)+(vy*vy))*(c/m);
+    return ay;
+}

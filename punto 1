@@ -125,3 +125,29 @@ double rkposix(double vx , double vy , double xo ){
     
 }
 
+int main(){
+    
+    double v0 = 300.0;
+    double angle = M_PI/4.0;
+    
+    double vtx=rkvelocidadx(v0*cos(angle), v0*sin(angle));
+    double vty=rkvelocidady(v0*cos(angle), v0*sin(angle));
+    double xt=rkposix(v0*cos(angle), v0*sin(angle),0);
+    double yt= rkposiy(v0*cos(angle), v0*sin(angle),0);
+    
+    ofstream file;
+    file.open("datos1.dat");
+    
+    for ( int i = 0 ; i < 2000 ; i++){
+        double t1=vtx;
+        double t2=vty;
+        double t3=xt;
+        double t4=yt;
+        vtx=rkvelocidadx(t1, t2);
+        vty=rkvelocidady(t1, t2) ;
+        xt=rkposix(t1, t2,t3) ;
+        yt=rkposiy(t1, t2,t4) ;
+        file <<  vtx<<" "<<vty << " "<< xt<<" "<< yt <<endl;
+    }
+    
+    

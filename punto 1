@@ -102,4 +102,26 @@ double rkposiy(double vx , double vy , double yo ){
    
     
 }
+double rkposix(double vx , double vy , double xo ){
+    
+    c11=h* aceleray( vx ,  vy );
+    d11=h*vx;
+    
+    c22=h*aceleray(vx+0.5*c11,vy);
+    d22=h*(vx+0.5*c22);
+    
+    c33=h*aceleray(vx+0.5*c22,vy);
+    d33=h*(vx+0.5*c33);
+    
+    c44=h*aceleray(vx+c33,vy);
+    d44=h*(vx+0.5*c44);
+    
+    
+    xf= xo+1.0/6.0 *(d11+d22*2+d33*2+d44);
+    
+    return xf;
+    
+    
+    
+}
 

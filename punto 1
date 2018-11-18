@@ -1,0 +1,37 @@
+#include <iostream>
+#include <fstream>
+#include <math.h>
+using namespace std;
+double g = 10.0;
+double c=0.2 ;
+double m = 850.0;
+ double ay;
+double ax;
+double h = 0.001;
+double c1;
+double d1;
+double c2;
+double d2;
+double c3;
+double d3;
+double c4;
+double d4;
+double vfx;
+double c11;
+double c22;
+double c33;
+double c44;
+double d11;
+double d22;
+double d33;
+double d44;
+double vfy;
+double xf;
+double yf;
+
+
+double acelerax(double vx, double vy){
+    
+    ax=((vx*vx)+(vy*vy))*(-c/m);
+    return ax;
+}
